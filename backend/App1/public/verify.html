@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./others/css/bootstrap.css">
+    <link rel="stylesheet" href="./others/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Verify</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-0">
+    <div class="container">
+      <a href="#" class="navbar-brand">Lucy</a>
+      
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navBar1"><span class="navbar-toggler-icon"></span></button>
+      
+      <div class="collapse navbar-collapse" id="navBar1">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a href="#" class="nav-link active">Dashboard</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="#" class="nav-link">Bookings</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="#" class="nav-link">Rooms</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="#" class="nav-link">Status</a>
+          </li>
+        </ul>
+
+        <!-- <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-user"></i> John
+            </a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">
+                <i class="fa fa-user-circle"></i> Profile
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="fa fa-gear"></i> Settings
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-user-times"></i> Logout
+            </a>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Page Header -->
+  
+  <header class="py-2 bg-warning text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fa fa-user"></i> Verify</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Area -->
+
+  <section>
+    <div class="container text-dark">
+      <div class="card mt-4 form-container" style="width: 30rem;">
+        <div class="card-title text-center bg-light">
+          <h2 class="text p-3 text-info">Verify</h2>
+        </div>
+        <form action="/api/v1/auth/verify" method="post" class="px-5 pb-5">
+          <div class="form-row">
+          </div>
+          <div class="form-group">
+            <label for="">Verification Token</label>
+            <input type="text" class="form-control form-control-sm" name="verificationToken" placeholder="******" required>
+          </div>
+          
+          <button class="btn btn-primary">Verify</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+    <script src="./others/js/jquery.min.js"></script>
+    <script src="./others/js/popper.min.js"></script>
+    <script src="./others/js/bootstrap.min.js"></script>
+</body>
+</html>

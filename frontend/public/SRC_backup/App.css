@@ -1,0 +1,146 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-0: #f0efff;
+}
+
+body {
+  color: #141516;
+  /* background-image: url("../public/images/house1.jpg");
+  background-color: rgba(14, 190, 193, 0.5);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; */
+}
+
+.home {
+  background-image: url("../public/images/room-11.jpeg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  /* height: 100vh; */
+}
+
+.home .checkAvailability {
+  /* background-color: rgb(255, 219, 15); */
+}
+
+.home .checkAvailability input {
+  border: none;
+}
+
+.home .checkAvailability .dateRange {
+  color: rgb(86, 86, 86);
+}
+
+.form-container {
+  width: 90vw;
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* padding: 0rem 0rem; */
+}
+
+.home-container {
+  /* background-image: url('../images/room-11.jpeg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+}
+
+.card-image2 img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.home .checkAvailability button {
+  margin-left: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .home .checkAvailability {
+    width: 100% !important;
+  }
+  .home .checkAvailability input {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 3px;
+  }
+  .home .checkAvailability .fieldContainer {
+    width: 100% !important;
+  }
+  .home .checkAvailability .dateRange {
+    width: 100% !important;
+  }
+  .home .checkAvailability button {
+    display: block;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 4px;
+  }
+
+  .rooms .card {
+    width: 100% !important;
+  }
+
+  .form-container {
+    width: 100% !important;
+  }
+}

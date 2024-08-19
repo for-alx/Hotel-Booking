@@ -1,0 +1,47 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import './App.css'
+
+import AdminLayout from "./component/admin/AdminLayout"
+import PersistLogin from "./component/PersistLogin"
+import Authorization from "./component/Authorization"
+import Signin from "./component/admin/Signin"
+import Room from "./component/admin/Room"
+import Dashboard from "./component/admin/Dashboard"
+import Home from "./component/Home"
+import Unauthorized from "./component/Unauthorized"
+import PageNotFound from "./component/PageNoteFound"
+import NetworkError from "./component/NeetworkError"
+
+
+import Test from "./component/Test"
+
+function App() {
+
+  return (
+    <div className="App">
+      <BrowserRouter>
+        {/* Main wrapper */}
+        <Routes>
+          {/* Public Routes */}
+          <Route index element={ <>Home page</> } />
+          <Route path="unauthorized" Component={ Unauthorized } />
+          <Route path="network-error" Component={ NetworkError } />
+          <Route path="signin" Component={ Signin } />
+
+          {/* Protected Routes */}
+          <Route element={ <PersistLogin /> }>
+            <Route element={ <Authorization allowedRoles={["manager", "receptionist"]} /> } >
+              <Route path="admin" element={ <AdminLayout /> }>
+                <Route path="test" Component={ Test } />
+                <Route path="room" Component={ Room } />
+                <Route path="dashboard" Component={ Dashboard } />
+              </Route>
+            </Route> 
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
